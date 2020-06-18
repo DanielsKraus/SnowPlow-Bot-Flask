@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SnowPlow Bot Controls</title>
+	<link rel="stylesheet" href='../static/sprite.css'/>
+  </head>
+  <body>
+    <h1 align="Center" style="background-color:yellow">Snowplow Bot</h1>
+	<img src="{{url_for('video_feed')}}" width="50%" class="center">
+	<table border = 0 align="Center" style="background-color:blue">
+	<tr><td></td><td>
+	  <table border = 0 align="Right" span="3" style="background-color:blue">
+	  <tr><td></td><td><p align="center">M</p></td></tr>
+		<tr>
+			<td>
+			</td>
+			<td><a href="/Forward" class="button" id="forward"></a></td>
+		</tr>
+		<tr>
+			<td><a href="/Left" class="button" id="left"></a></td>
+			<td><a href="/Stop" class="button" id="stop"></a></td>
+			<td><a href="/Right" class="button" id="right"></a></td>
+		</tr>
+		
+		<tr><td></td><td><a href="/Backward" class="button" id="backward"></a></td></tr>
+		
+		<tr><td></td><td><p align="center">P</p></td></tr>
+		<tr><td></td><td><a href="/plowUp" class="button" id="plowup"></a></td></tr>
+		<tr>
+			<td><a href="/plowLeft" class="button" id="plowleft"></a></td>
+			<td><a href="/plowCenter" class="button" id="plowcenter"></a></td>
+			<td><a href="/plowRight" class="button" id="plowright"></a></td>
+		</tr>
+			<tr><td></td><td><a href="/plowDown" class="button" id="plowdown"></a></td></tr>
+		</table>
+		<footer>
+			<p align="Right"><font size="3" face="Impact" color="white">Automate Everything</font></p>
+		</footer>
+  </body>
+</html>  

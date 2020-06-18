@@ -1,0 +1,70 @@
+#forward {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -3px -66px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#backward {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -2px -24px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#left {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -2px -45px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#right {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -3px -2px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#stop {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -2px -86px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#plowup {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -3px -66px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#plowdown {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -2px -24px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#plowleft {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -2px -45px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#plowright {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -3px -2px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
+#plowcenter {
+	background: white url('arrow_sprite_alpha.jpg') no-repeat -2px -86px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 1px 1px 1px 1px;
+}
