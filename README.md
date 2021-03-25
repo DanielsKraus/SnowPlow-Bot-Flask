@@ -1,8 +1,8 @@
 # SnowPlow-Bot-Flask
-  A webapp created using Flask and Opencv for streaming video on a Raspberry Pi.  The website displays controls and streamed video so you can teleop the robot in what ever enviroment you wish.  This is done by pushing a button on website which will send commands to the robot via serial from the Raspberry Pi to an Arduino.  After button is pushed also it is displayed what it is doing in the terminal.  
+  A webapp created using Flask and Opencv for streaming video on a Raspberry Pi.  The website displays controls and streamed video so you can teleop the robot in what ever environment you wish.  This is done by pushing a button on the website which will send commands to the robot via serial from the Raspberry Pi to an Arduino.  After button is pushed it is printed what action is made to the terminal.  
 
 
-### Installation  for Flask
+### Installation for Flask
 ```
 $ sudo pip install flask
 ```
