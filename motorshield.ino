@@ -13,7 +13,7 @@
 Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
 
 Adafruit_DCMotor *motorL = AFMS.getMotor(1); // track motor left
-Adafruit_DCMotor *motorR = AFMS.getMotor(2); // track motr right
+Adafruit_DCMotor *motorR = AFMS.getMotor(2); // track motor right
 
 Servo standard;  //standard high torque servo
 Servo micro;     // micro high torque servo
