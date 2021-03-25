@@ -39,75 +39,45 @@ count = 0
 def homepage():
     return render_template("main.html")
 
-@app.route('/forward/', methods=['POST'])
-def forward():
-    action = "forward"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/backward/', methods=['POST'])  
-def backward():
-    action = "backward"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/left/', methods=['POST'])
-def left():
-    action = "left"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
+@app.route("/<move>")
+def action(move):
+    if move=='Forward' or keyboard.is_pressed('w'):
+        print("moving forward", file=sys.stderr) # displays message of action
+        ser.write(b'forward\n')  # send commands as strings to mcu
+    elif move=='Backward' or keyboard.is_pressed('s'):
+        print("moving backwards", file=sys.stderr)
+        ser.write(b'backward\n')
+    elif move=='Left' or keyboard.is_pressed('a'):
+        print("turning left", file=sys.stderr)
+        ser.write(b'left\n')
+    elif move=='Right' or keyboard.is_pressed('d'):
+        print("turning right", file=sys.stderr)
+        ser.write(b'right\n')
+    elif move=='Stop' or keyboard.is_pressed('space'):
+        print("stopping", file=sys.stderr)
+        ser.write(b'stop\n')
+    else:
+        pass
     
-@app.route('/right/', methods=['POST'])
-def right():
-    action = "right"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/stop/', methods=['POST'])
-def stop():
-    action = "stop"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/plowup/', methods=['POST'])
-def plowUp():
-    action = "plowUp"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/plowdown/', methods=['POST'])
-def plowDown():
-    action = "plowDown"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/plowleft/', methods=['POST'])
-def plowLeft():
-    action = "plowLeft"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/plowright/', methods=['POST'])
-def plowRight():
-    action = "plowRight"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
-
-@app.route('/plowcenter/', methods=['POST'])
-def plowCenter():
-    action = "plowCenter"
-    print(action)
-    ser.write(action + '\n'.encode('ascii'))
-    return render_template("main.html", forward_message = action)
+    if move=='plowUp' or keyboard.is_pressed('i'):
+        print("plow up", file=sys.stderr)
+        ser.write(b'plow up\n')
+    elif move=='plowDown' or keyboard.is_pressed('k'):
+        print("plow moving down", file=sys.stderr)
+        ser.write(b'plow down\n')
+    elif move=='plowLeft' or keyboard.is_pressed('j'):
+        print("plow moving left", file=sys.stderr)
+        ser.write(b'plow left\n')
+    elif move=='plowRight' or keyboard.is_pressed('l'):
+        print("plow moving right", file=sys.stderr)
+        ser.write(b'plow right\n')
+    elif move=='plowCenter'or keyboard.is_pressed('c'):
+        print("plow moving to center", file=sys.stderr)
+        ser.write(b'plow center\n')
+    else:
+        pass
+    
+    return render_template('main.html')
 
 
 # streaming video
